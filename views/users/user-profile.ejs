@@ -1,0 +1,12 @@
+<a href="/">Home</a>
+
+<% if(userInSession) { %>
+    <h2>Welcome, <%= userInSession.username %>!</h2>
+    <p>This is your profile page my friend!</p>
+    <form id="logout-form" action="/auth/logout" method="POST">
+        <button>Logout</button>
+    </form>
+    <% } else { %>
+        <br>
+        <p>Still no logged in user, sorry!</p>
+        <% } %>
